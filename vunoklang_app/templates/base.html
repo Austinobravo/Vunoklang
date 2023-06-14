@@ -46,7 +46,7 @@ https://templatemo.com/tm-587-tiya-golf-club
                     </a>
 
                     <div class="d-lg-none ms-auto me-3">
-                        <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
+                        <a class="btn custom-btn custom-border-btn"  href="{% url 'authors_guide_download' %}" role="button" >Author's Guide</a>
                     </div>
     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,18 +60,18 @@ https://templatemo.com/tm-587-tiya-golf-club
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">About</a>
+                                <a class="nav-link " href="#">About</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link " href="#">Editorial Board</a>
+                                <a class="nav-link " href="{% url 'editorial_board' %}">Editorial Board</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link " href="#">Journals</a>
                             </li>
 
-                            <li class="nav-item">
+                            {% comment %} <li class="nav-item">
                                 <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
                             </li>
 
@@ -83,11 +83,11 @@ https://templatemo.com/tm-587-tiya-golf-club
 
                                     <li><a class="dropdown-item" href="{% url 'event_details' %}">Event Detail</a></li>
                                 </ul>
-                            </li>
+                            </li> {% endcomment %}
                         </ul>
 
                         <div class="d-none d-lg-block ms-lg-3">
-                            <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Author's Guide</a>
+                            <a class="btn custom-btn custom-border-btn" href="{% url 'authors_guide_download' %}" role="button">Author's Guide</a>
                         </div>
                     </div>
                 </div>
