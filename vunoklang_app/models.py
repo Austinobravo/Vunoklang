@@ -132,6 +132,7 @@ class ContactUs(models.Model):
             return self.name
         
 #The About Header
+<<<<<<< HEAD
 class AboutImages(models.Model):
     name=models.CharField(max_length=100, null=True, blank=True)
     header_image=models.ImageField(null=True, blank=True)
@@ -141,6 +142,18 @@ class AboutImages(models.Model):
     
     
 
+=======
+class AboutHeaders(models.Model):
+    main_header=models.CharField(max_length=100, null=True, blank=True)
+    second_header=models.CharField(max_length=200, null=True, blank=True)
+    volume=models.CharField(max_length=50, null=True, blank=True)
+    header_image1=models.ImageField(null=True, blank=True)
+    header_image2=models.ImageField(null=True, blank=True)
+    
+    
+    def __str__(self):
+        return self.main_header
+>>>>>>> f53b3285715e70b3f774d14b55489e282fd24502
     
 
 
