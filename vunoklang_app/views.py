@@ -1,9 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-<<<<<<< HEAD
 from .models import Authors_Guide, EditorialMembers,AboutImages,AboutPage, ContactUs,BookDetailPost
-=======
-from .models import Authors_Guide, EditorialMembers,AboutHeaders,AboutPage, ContactUs,BookDetailPost
->>>>>>> f53b3285715e70b3f774d14b55489e282fd24502
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import messages
 from django.urls  import reverse
@@ -47,21 +43,6 @@ def editorial_board(request):
 
 def journal_detail(request):
     context = {}
-<<<<<<< HEAD
-=======
-    return render(request, "about_page.html", context)
-
-def editorial_board(request):
-    editorial_members= EditorialMembers.objects.all()
-    context = {
-        "editorial_members":editorial_members
-    }
-    return render(request, "editorial-board.html", context)
-
-
-def journal_detail(request):
-    context = {}
->>>>>>> f53b3285715e70b3f774d14b55489e282fd24502
     return render(request, "journal-detail.html", context) 
 
 
@@ -80,17 +61,10 @@ def contact_message(request):
             new_message=ContactUs(name=name, email=email, subject=subject, messagename=message)
             new_message.save()
             messages.success(request, "Message sent successfully")
-<<<<<<< HEAD
             return HttpResponseRedirect(reverse("about_page"))
         except:
             messages.error(request, "Failed to send Message")
             return HttpResponseRedirect(reverse("about_page"))
-=======
-            return HttpResponseRedirect(reverse("about"))
-        except:
-            messages.error(request, "Failed to send Message")
-            return HttpResponseRedirect(reverse("about"))
->>>>>>> f53b3285715e70b3f774d14b55489e282fd24502
         
 
  #The Authors Guide Button  
@@ -99,11 +73,7 @@ def authors_guide_download(request) :
         try:
             response = HttpResponse(document.author, content_type='application/pdf')
             response['Content-Disposition'] = f'attachment; filename="{document.author.name}"'
-<<<<<<< HEAD
             return response 
-=======
-            return response
->>>>>>> f53b3285715e70b3f774d14b55489e282fd24502
         except ValueError:
             messages.info(request, 'Document not found')
             return HttpResponseRedirect(reverse("home"))
