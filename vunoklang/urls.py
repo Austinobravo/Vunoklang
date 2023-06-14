@@ -21,5 +21,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('vunoklang_app.urls'))
+    path('', include('vunoklang_app.urls'))#, namespace="app"
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
