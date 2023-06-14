@@ -11,4 +11,6 @@ urlpatterns = [
     path('authors_guide_download/', authors_guide_download, name="authors_guide_download"),
     path('download/<int:pk>', download, name="download"),
     path('journal_detail/', journal_detail, name="journal_detail"),
+    path('event_listing/', event_listing, name="event_listing"),
+    path('about_page/', about_page, name="about_page"),
 ]

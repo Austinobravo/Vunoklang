@@ -15,9 +15,15 @@ def event_details(request):
     context = {}
     return render(request, "event-detail.html", context)
 
+
 def event_listing(request):
     context = {}
     return render(request, "event-listing.html", context)
+
+
+def about_page(request):
+    context = {}
+    return render(request, "about_page.html", context)
 
 def editorial_board(request):
     editorial_members= EditorialMembers.objects.all()
