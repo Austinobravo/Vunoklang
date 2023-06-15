@@ -12,15 +12,17 @@ def home(request):
     last_journal=BookDetailPost.objects.last()
     date_str=str(last_journal.created_on)
     date_str.split(" ")
+    name="name"
     date_split=date_str.split(" ")[0].split("-")
     day, month, year=date_split[2], date_split[1], date_split[0]
   
-    context = {"journals":journals, "last_journal":last_journal, "day":day, "month":month, "year":year }
+    context = {"journals":journals, "last_journal":last_journal, "day":day, "month":month, "year":year, "name":name}
     return render(request, 'index.html', context)
 
 def all_journals(request):
     journals=BookDetailPost.objects.all()
-    context={"journals":journals}
+    name="name"
+    context={"journals":journals, "name":name}
     return render(request, "all_journals.html", context)
 
 
